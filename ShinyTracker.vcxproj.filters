@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="Include\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Include\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Include\imgui_demo.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\imgui_draw.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\imgui_tables.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\imgui_widgets.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomInclude\save&amp;load.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomInclude\backend.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\imconfig.h" />
+    <ClInclude Include="Include\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="Include\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="Include\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Include\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="Include\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="Include\imconfig.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\imgui.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\imgui_internal.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\imstb_rectpack.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\imstb_textedit.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\imstb_truetype.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomInclude\backend.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomInclude\save&amp;load.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.txt" />
+    <None Include="Include\Makefile.emscripten">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="Include\Makefile">
+      <Filter>Source</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{2a5e1107-af13-4100-b0fb-1800bfb8a513}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

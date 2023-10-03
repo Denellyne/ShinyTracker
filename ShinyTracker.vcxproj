@@ -91,13 +91,13 @@
     <ClCompile>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
@@ -107,13 +107,13 @@
     <ClCompile>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
@@ -125,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -134,7 +134,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>
@@ -147,7 +147,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -156,7 +156,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;C:\Users\Gustavo Santos\Desktop\Boost Libraries\libs;..\libs\glfw\lib-vc2010-64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>
@@ -164,30 +164,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="backend.cpp" />
+    <ClCompile Include="CustomInclude\backend.cpp" />
+    <ClCompile Include="CustomInclude\save&amp;load.cpp" />
     <ClCompile Include="imgui.cpp" />
-    <ClCompile Include="imgui_demo.cpp" />
-    <ClCompile Include="imgui_draw.cpp" />
-    <ClCompile Include="imgui_tables.cpp" />
-    <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="Include\backends\imgui_impl_glfw.cpp" />
     <ClCompile Include="Include\backends\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="save&amp;load.cpp" />
+    <ClCompile Include="Include\imgui_demo.cpp" />
+    <ClCompile Include="Include\imgui_draw.cpp" />
+    <ClCompile Include="Include\imgui_tables.cpp" />
+    <ClCompile Include="Include\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imconfig.h" />
-    <ClInclude Include="backend.h" />
-    <ClInclude Include="imgui.h" />
+    <ClInclude Include="CustomInclude\backend.h" />
+    <ClInclude Include="CustomInclude\save&amp;load.h" />
     <ClInclude Include="Include\backends\imgui_impl_glfw.h" />
     <ClInclude Include="Include\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="Include\backends\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="Include\glfw\include\GLFW\glfw3.h" />
     <ClInclude Include="Include\glfw\include\GLFW\glfw3native.h" />
-    <ClInclude Include="save&amp;load.h" />
+    <ClInclude Include="Include\imconfig.h" />
+    <ClInclude Include="Include\imgui.h" />
+    <ClInclude Include="Include\imgui_internal.h" />
+    <ClInclude Include="Include\imstb_rectpack.h" />
+    <ClInclude Include="Include\imstb_textedit.h" />
+    <ClInclude Include="Include\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.txt" />
+    <None Include="Include\Makefile" />
+    <None Include="Include\Makefile.emscripten" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
