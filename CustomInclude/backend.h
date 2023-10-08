@@ -4,8 +4,6 @@
 #include <boost/multiprecision/cpp_int.hpp>
 using boost::multiprecision::cpp_int;
 
-cpp_int factorial(long int pokemonSeen, int shinySeen);
+void binomialDistribution(long int pokemonSeen, double Odds, double &binomialResult);
 
-float binomialDistribution(long int pokemonSeen, double Odds, int shinySeen, double* ptrResult);
-
-double oddsCalculator(bool oldOdds, bool shinyCharm, double *pointer);
+void oddsCalculator(bool oldOdds, bool shinyCharm, double &result);

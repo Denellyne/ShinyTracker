@@ -5,7 +5,7 @@
 #include "imgui_impl_opengl3.h"
 #include <stdio.h>
 #include "backend.h"
-#include <thread>
+#include <future>
 #include "save&load.h"
 #include <bitset>
 #define GL_SILENCE_DEPRECATION
@@ -100,11 +100,9 @@ int main(int, char**)
     bool newOdds = false;
     bool shinyCharm = false;
     int pokemonSeen = 0;
-    int shinySeen = 0;
-    double resultOdds = 0;
-    double* ptrOdds = &resultOdds;
+    double odds = 0;
     double binomialResult = 0;
-    double *ptrBinomialResult = &binomialResult;
+    double* binomialPtr = &binomialResult;
 
 
     // Main loop
@@ -124,21 +122,18 @@ int main(int, char**)
         
 
         if (ImGui::IsKeyPressed(ImGuiKey_Delete)) {
-
-            std::thread thread1(oddsCalculator, oldOdds, shinyCharm, ptrOdds);
-            thread1.join();
             pokemonSeen++;
-            std::thread thread2(binomialDistribution, pokemonSeen, *ptrOdds, shinySeen, ptrBinomialResult);
-            thread2.join();
-
+            std::async(std::launch::async,oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
+            std::async(std::launch::async,binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+            *binomialPtr = binomialResult;
+            
         }
         if (ImGui::IsKeyPressed(ImGuiKey_End)) {
 
-            std::thread thread1(oddsCalculator, oldOdds, shinyCharm, ptrOdds);
-            thread1.join();
             pokemonSeen--;
-            std::thread thread2(binomialDistribution, pokemonSeen, *ptrOdds, shinySeen, ptrBinomialResult);
-            thread2.join();
+            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
+            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+            *binomialPtr = binomialResult;
 
         }
 
@@ -149,28 +144,19 @@ int main(int, char**)
         ImGui::SetCursorPos(ImVec2(160, 55));
         ImGui::DragInt(" ", &pokemonSeen, 50);
         ImGui::SetCursorPos(ImVec2(100, 55));
-        if (ImGui::Button(("Shiny +"), ImVec2(50, 30))) {
-            shinySeen++;
-        }
-        ImGui::SetCursorPos(ImVec2(100, 95));
-        if (ImGui::Button(("Shiny -"), ImVec2(50, 30))) {
-            shinySeen--;
-        }
         ImGui::SetCursorPos(ImVec2(413, 80));
         if (ImGui::Button(("+"),ImVec2(30,30))) {
-            std::thread thread1(oddsCalculator,oldOdds, shinyCharm, ptrOdds);
-            thread1.join();
             pokemonSeen++;
-            std::thread thread2(binomialDistribution, pokemonSeen, *ptrOdds, shinySeen,ptrBinomialResult);
-            thread2.join();
+            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
+            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+            *binomialPtr = binomialResult;
         }
         ImGui::SetCursorPos(ImVec2(453, 80));
         if (ImGui::Button(("-"), ImVec2(30, 30))) {
-            std::thread thread1(oddsCalculator, oldOdds, shinyCharm, ptrOdds);
-            thread1.join();
             pokemonSeen--;
-            std::thread thread2(binomialDistribution, pokemonSeen, *ptrOdds, shinySeen,ptrBinomialResult);
-            thread2.join();
+            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
+            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+            *binomialPtr = binomialResult;
         }
         ImGui::End();
 
@@ -188,7 +174,7 @@ int main(int, char**)
         ImGui::Begin("Info");
 
         ImGui::Text("Pokemon Seen: %d", pokemonSeen);
-        ImGui::Text("Probability of already have found a shiny: %f%%", *ptrBinomialResult);
+        ImGui::Text("Probability of already have found a shiny: %f%%", *binomialPtr);
 
         ImGui::End();
 
@@ -216,7 +202,7 @@ int main(int, char**)
     EMSCRIPTEN_MAINLOOP_END;
 #endif
 
-    SaveLoad::saveData(oldOdds,shinyCharm,pokemonSeen,shinySeen,ptrOdds,ptrBinomialResult);
+    //SaveLoad::saveData(oldOdds,shinyCharm,pokemonSeen,odds,binomialResult);
 
     // Cleanup
     ImGui_ImplOpenGL3_Shutdown();

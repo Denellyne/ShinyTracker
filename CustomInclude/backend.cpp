@@ -4,60 +4,19 @@
 #include <boost/multiprecision/cpp_int.hpp>
 using boost::multiprecision::cpp_int;
 
-cpp_int factorial(long int pokemonSeen, int shinySeen) {
-    cpp_int pokemonSeenFactorial = 1;
-    cpp_int shinySeenFactorial = 1;
-    cpp_int nMinusk = pokemonSeen - shinySeen;
-    cpp_int nMinuskFactorial = 1;
-    cpp_int result;
-    if (pokemonSeen != 0) {
-
-        for (int i = 0; i < pokemonSeen;i++) {
-            pokemonSeenFactorial = pokemonSeenFactorial * (pokemonSeen - i);
-        }
-        if (shinySeen != 0) {
-            for (int i = 0; i < shinySeen;i++) {
-                shinySeenFactorial = shinySeenFactorial * (shinySeen - i);
-            }
-        }
-        else {
-            shinySeenFactorial = 1;
-        }
-        if (nMinusk != pokemonSeen) {
-            for (int i = 0; i < nMinusk;i++) {
-                nMinuskFactorial = nMinuskFactorial * (nMinusk - i);
-            }
-        }
-        else {
-            nMinuskFactorial = pokemonSeenFactorial;
-        }
-        result = ((pokemonSeenFactorial) / (shinySeenFactorial * nMinuskFactorial));
-        return result;
-    }
-    return 1;
-}
-
-float binomialDistribution(long int pokemonSeen, double Odds, int shinySeen, double *ptrResult) {
+void binomialDistribution(long int pokemonSeen, double Odds, double &binomialResult) {
 
     long double result;
-    cpp_int binomialCoefficient;
-    binomialCoefficient = factorial(pokemonSeen, shinySeen);
 
-    result = ((pow(Odds, shinySeen) * (pow((1 - Odds), (pokemonSeen - shinySeen)))));
+    result = ((1 * (pow((1 - Odds), (pokemonSeen)))));
 
-    float convertedCoefficient = binomialCoefficient.convert_to<float>();
+    result = (1 - (1 * result)) * 100;
 
-    result = (1 - (convertedCoefficient * result)) * 100;
-
-    *ptrResult = result;
-
-
-    return 1;
+    binomialResult = result;
 
 }
 
-
-double oddsCalculator(bool oldOdds, bool shinyCharm, double *ptrResult) {
+void oddsCalculator(bool oldOdds, bool shinyCharm, double &result) {
 
     double odds;
 
@@ -75,7 +34,5 @@ double oddsCalculator(bool oldOdds, bool shinyCharm, double *ptrResult) {
         }
     }
 
-    *ptrResult = odds;
-
-    return *ptrResult;
+    result = odds;
 }
