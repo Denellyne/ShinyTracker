@@ -57,3 +57,18 @@ examples/example_sdl2_metal/example_sdl2_metal
 examples/example_sdl2_opengl2/example_sdl2_opengl2
 examples/example_sdl2_opengl3/example_sdl2_opengl3
 examples/example_sdl2_sdlrenderer/example_sdl2_sdlrenderer
+Release/ShinyTracker.vcxproj.FileListAbsolute.txt
+Release/Shiny Tracker.tlog/Shiny Tracker.lastbuildstate
+Release/Shiny Tracker.tlog/link.write.2u.tlog
+Release/Shiny Tracker.tlog/link.write.1.tlog
+Release/Shiny Tracker.tlog/link.read.1.tlog
+Release/Shiny Tracker.tlog/link.command.1.tlog
+Release/Shiny Tracker.tlog/CL.write.1.tlog
+Release/Shiny Tracker.tlog/CL.read.1.tlog
+Release/Shiny Tracker.tlog/Cl.items.tlog
+Release/Shiny Tracker.tlog/CL.command.1.tlog
+Release/Shiny Tracker.ipdb
+Release/Shiny Tracker.iobj
+Release/Shiny Tracker.exe.recipe
+Release/icons/github.png
+Release/fonts/Exo2.ttf

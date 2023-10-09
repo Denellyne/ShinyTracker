@@ -37,7 +37,7 @@ int main(int, char**)
     
 {
     
-    system("taskkill /f /im WindowsTerminal.exe");
+   // system("taskkill /f /im WindowsTerminal.exe");
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
         return 1;
