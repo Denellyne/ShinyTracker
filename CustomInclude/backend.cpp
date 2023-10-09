@@ -1,6 +1,8 @@
 #include "backend.h"
 #include "imgui.h"
 #include <cmath>
+#include <iostream>
+#include <future>
 
 void binomialDistribution(long int pokemonSeen, double Odds, double &binomialResult) {
 
@@ -9,21 +11,26 @@ void binomialDistribution(long int pokemonSeen, double Odds, double &binomialRes
     result = (1 - (1 * result)) * 100;
     binomialResult = result;
 }
+double oddsCalculator(bool oldOdds, bool shinyCharm, double &result) {
 
-void oddsCalculator(bool oldOdds, bool shinyCharm, double &result) {
-
-    double odds;
-    if (oldOdds) {
+    double odds;   
+    switch (oldOdds) {
+    case true:
         odds = 0.00012207031;
         if (shinyCharm) {
             odds = odds * 3;
         }
-    }
-    if (!oldOdds) {
+        result = odds;
+        return result;
+        break;
+    case false:
         odds = 0.00024414062;
         if (shinyCharm) {
             odds = odds * 3;
         }
+        result = odds;
+        return result;
+        break;
     }
-    result = odds;
+    
 }

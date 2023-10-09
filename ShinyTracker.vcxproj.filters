@@ -64,6 +64,7 @@
     <ClInclude Include="CustomInclude\loadImage.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.txt" />
@@ -78,5 +79,11 @@
     <Filter Include="Source">
       <UniqueIdentifier>{2a5e1107-af13-4100-b0fb-1800bfb8a513}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Shiny Tracker.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
   </ItemGroup>
 </Project>

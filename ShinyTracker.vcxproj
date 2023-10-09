@@ -91,13 +91,13 @@
     <ClCompile>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;..\libs\glfw\lib-vc2010-32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends\vulkan;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
@@ -107,13 +107,13 @@
     <ClCompile>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;..\libs\glfw\lib-vc2010-64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends\vulkan;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
@@ -125,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -134,7 +134,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;..\libs\glfw\lib-vc2010-32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends\vulkan;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>
@@ -147,7 +147,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\include;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\backends;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -156,7 +156,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;C:\Users\Gustavo Santos\Desktop\Shiny Tracker;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include\glfw;C:\Users\Gustavo Santos\Desktop\Shiny Tracker\Include;..\libs\glfw\lib-vc2010-64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\lib-vc2010-64;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends\vulkan;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>
@@ -193,11 +193,18 @@
     <ClInclude Include="Include\imstb_textedit.h" />
     <ClInclude Include="Include\imstb_truetype.h" />
     <ClInclude Include="Include\stb_image.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.txt" />
     <None Include="Include\Makefile" />
     <None Include="Include\Makefile.emscripten" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Shiny Tracker.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

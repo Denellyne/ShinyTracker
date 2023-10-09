@@ -1,7 +1,6 @@
 
-#include <GLFW/glfw3.h>
+#include <glfw3.h>
 #include "loadImage.h"
-#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
 // Simple helper function to load an image into a OpenGL texture with common settings

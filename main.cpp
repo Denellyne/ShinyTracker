@@ -1,6 +1,5 @@
 ﻿#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
-
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
@@ -10,13 +9,14 @@
 #include "save&load.h"
 #include <bitset>
 #include "loadImage.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
 
 #define GL_SILENCE_DEPRECATION
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
 #endif
-#include <GLFW/glfw3.h> // Will drag system OpenGL headers
-
+#include <glfw3.h> // Will drag system OpenGL headers
 #if defined(_MSC_VER) && (_MSC_VER >= 1900) && !defined(IMGUI_DISABLE_WIN32_FUNCTIONS)
 #pragma comment(lib, "legacy_stdio_definitions")
 #endif
@@ -37,7 +37,8 @@ int main(int, char**)
     
 {
     
-   // system("taskkill /f /im WindowsTerminal.exe");
+
+    
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
         return 1;
@@ -65,10 +66,19 @@ int main(int, char**)
     //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // 3.0+ only
 #endif
 
+
     GLFWwindow* window = glfwCreateWindow(1000, 300, "Shiny Tracker", nullptr, nullptr);
+
     if (window == nullptr)
         return 1;
     glfwMakeContextCurrent(window);
+    int width, height ,channels;
+    unsigned char* icon = stbi_load("icon.png", &width, &height, &channels, 4);
+    GLFWimage images[1];
+    images[0].width = width;
+    images[0].height = height;
+    images[0].pixels = icon;
+    glfwSetWindowIcon(window, 1, images);
     glfwSwapInterval(1); // Enable vsync
 
     // Setup Dear ImGui context
@@ -104,9 +114,11 @@ int main(int, char**)
     bool newOdds = false;
     bool shinyCharm = false;
     int pokemonSeen = 0;
-    double odds = 0;
+    double odds = 0.00012207031;
     double binomialResult = 0;
-    GLuint my_image_texture = 0;
+    GLuint my_image_texture;
+    GLuint myIcon;
+    
     bool ret = LoadTextureFromFile("icons//github.png", &my_image_texture, NULL, NULL);
     
 
@@ -116,6 +128,9 @@ int main(int, char**)
     io.IniFilename = nullptr;
     EMSCRIPTEN_MAINLOOP_BEGIN
 #else
+
+
+    
     while (!glfwWindowShouldClose(window))
 #endif
     {
@@ -126,61 +141,58 @@ int main(int, char**)
 
         //My code
         
-
-        if (ImGui::IsKeyPressed(ImGuiKey_Delete)) {
-            pokemonSeen++;
-            std::async(std::launch::async,oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
-            std::async(std::launch::async,binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));   
-        }
-        if (ImGui::IsKeyPressed(ImGuiKey_End)) {
-
-            pokemonSeen--;
-            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
-            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
-        }
-
-
         ImGui::Begin("Counter");
         ImGui::SetCursorPos(ImVec2(405, 35));
         ImGui::Text("Pokemon Seen");
         ImGui::SetCursorPos(ImVec2(160, 55));
-        ImGui::DragInt(" ", &pokemonSeen, 50);
+        if (ImGui::DragInt(" ", &pokemonSeen, 50)) {
+            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+        }
         ImGui::SetCursorPos(ImVec2(413, 80));
         if (ImGui::Button(("+"),ImVec2(30,30))) {
-            pokemonSeen++;
-            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
+            pokemonSeen++;            
             std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
         }
         ImGui::SetCursorPos(ImVec2(453, 80));
         if (ImGui::Button(("-"), ImVec2(30, 30))) {
             pokemonSeen--;
-            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
             std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
         }
         ImGui::SetCursorPos(ImVec2(800, 80));
         if (ImGui::ImageButton((void*)(intptr_t)my_image_texture, ImVec2(60, 35))) {
             system("start https://github.com/Denellyne");
         }
-
         ImGui::End();
 
         ImGui::Begin("Options");
-        ImGui::Checkbox("Shiny Charm", &shinyCharm);
+        if (ImGui::Checkbox("Shiny Charm", &shinyCharm)) {
+            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
+        }
 
         if (ImGui::Checkbox("Old Odds", &oldOdds)) {
             newOdds = false;
+            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
         }
         if (ImGui::Checkbox("New Odds", &newOdds))
         {
             oldOdds = false;
+            std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
         }
         ImGui::End();
         ImGui::Begin("Info");
-
         ImGui::Text("Pokemon Seen: %d", pokemonSeen);
         ImGui::Text("Probability of already have found a shiny: %f%%", binomialResult);
+        ImGui::Text("Press the Delete key to add 1 to the counter");
+        ImGui::Text("Press the End key to subtract 1 from the counter");
         ImGui::End();
-
+        if (ImGui::IsKeyPressed(ImGuiKey_Delete)) {
+            pokemonSeen++;
+            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+        }
+        if (ImGui::IsKeyPressed(ImGuiKey_End)) {
+            pokemonSeen--;
+            std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
+        }
 
         // Rendering
         ImGui::Render();
