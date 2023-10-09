@@ -94,6 +94,7 @@
       <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -110,6 +111,7 @@
       <AdditionalIncludeDirectories>C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\glfw\include\GLFW;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include\backends;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\Include;C:\Users\Gustavo Santos\Documents\GitHub\ShinyTracker\CustomInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -129,6 +131,7 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -151,6 +154,7 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

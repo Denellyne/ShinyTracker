@@ -117,7 +117,6 @@ int main(int, char**)
     double odds = 0.00012207031;
     double binomialResult = 0;
     GLuint my_image_texture;
-    GLuint myIcon;
     
     bool ret = LoadTextureFromFile("icons//github.png", &my_image_texture, NULL, NULL);
     

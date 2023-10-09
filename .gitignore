@@ -76,3 +76,5 @@ Release/Shiny Tracker.res
 Release/Shiny Tracker.tlog/rc.command.1.tlog
 Release/Shiny Tracker.tlog/rc.read.1.tlog
 Release/Shiny Tracker.tlog/rc.write.1.tlog
+Release/removeBloat.bat
+ShinyTracker.vcxproj
