@@ -165,6 +165,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CustomInclude\backend.cpp" />
+    <ClCompile Include="CustomInclude\loadImage.cpp" />
     <ClCompile Include="CustomInclude\save&amp;load.cpp" />
     <ClCompile Include="imgui.cpp" />
     <ClCompile Include="Include\backends\imgui_impl_glfw.cpp" />
@@ -178,6 +179,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\imconfig.h" />
     <ClInclude Include="CustomInclude\backend.h" />
+    <ClInclude Include="CustomInclude\loadImage.h" />
     <ClInclude Include="CustomInclude\save&amp;load.h" />
     <ClInclude Include="Include\backends\imgui_impl_glfw.h" />
     <ClInclude Include="Include\backends\imgui_impl_opengl3.h" />
@@ -190,6 +192,7 @@
     <ClInclude Include="Include\imstb_rectpack.h" />
     <ClInclude Include="Include\imstb_textedit.h" />
     <ClInclude Include="Include\imstb_truetype.h" />
+    <ClInclude Include="Include\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.txt" />

@@ -1,5 +1,6 @@
 ﻿#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
+
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
@@ -8,6 +9,8 @@
 #include <future>
 #include "save&load.h"
 #include <bitset>
+#include "loadImage.h"
+
 #define GL_SILENCE_DEPRECATION
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -33,6 +36,7 @@ int main(int, char**)
 
     
 {
+    
     system("taskkill /f /im WindowsTerminal.exe");
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
@@ -102,7 +106,9 @@ int main(int, char**)
     int pokemonSeen = 0;
     double odds = 0;
     double binomialResult = 0;
-    double* binomialPtr = &binomialResult;
+    GLuint my_image_texture = 0;
+    bool ret = LoadTextureFromFile("icons//github.png", &my_image_texture, NULL, NULL);
+    
 
 
     // Main loop
@@ -124,17 +130,13 @@ int main(int, char**)
         if (ImGui::IsKeyPressed(ImGuiKey_Delete)) {
             pokemonSeen++;
             std::async(std::launch::async,oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
-            std::async(std::launch::async,binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
-            *binomialPtr = binomialResult;
-            
+            std::async(std::launch::async,binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));   
         }
         if (ImGui::IsKeyPressed(ImGuiKey_End)) {
 
             pokemonSeen--;
             std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
             std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
-            *binomialPtr = binomialResult;
-
         }
 
 
@@ -143,21 +145,23 @@ int main(int, char**)
         ImGui::Text("Pokemon Seen");
         ImGui::SetCursorPos(ImVec2(160, 55));
         ImGui::DragInt(" ", &pokemonSeen, 50);
-        ImGui::SetCursorPos(ImVec2(100, 55));
         ImGui::SetCursorPos(ImVec2(413, 80));
         if (ImGui::Button(("+"),ImVec2(30,30))) {
             pokemonSeen++;
             std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
             std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
-            *binomialPtr = binomialResult;
         }
         ImGui::SetCursorPos(ImVec2(453, 80));
         if (ImGui::Button(("-"), ImVec2(30, 30))) {
             pokemonSeen--;
             std::async(std::launch::async, oddsCalculator, oldOdds, shinyCharm, std::ref(odds));
             std::async(std::launch::async, binomialDistribution, pokemonSeen, odds, std::ref(binomialResult));
-            *binomialPtr = binomialResult;
         }
+        ImGui::SetCursorPos(ImVec2(800, 80));
+        if (ImGui::ImageButton((void*)(intptr_t)my_image_texture, ImVec2(60, 35))) {
+            system("start https://github.com/Denellyne");
+        }
+
         ImGui::End();
 
         ImGui::Begin("Options");
@@ -174,8 +178,7 @@ int main(int, char**)
         ImGui::Begin("Info");
 
         ImGui::Text("Pokemon Seen: %d", pokemonSeen);
-        ImGui::Text("Probability of already have found a shiny: %f%%", *binomialPtr);
-
+        ImGui::Text("Probability of already have found a shiny: %f%%", binomialResult);
         ImGui::End();
 
 

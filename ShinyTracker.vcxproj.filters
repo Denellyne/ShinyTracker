@@ -23,6 +23,9 @@
     <ClCompile Include="CustomInclude\backend.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="CustomInclude\loadImage.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imconfig.h" />
@@ -53,6 +56,12 @@
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="CustomInclude\save&amp;load.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\stb_image.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomInclude\loadImage.h">
       <Filter>Source</Filter>
     </ClInclude>
   </ItemGroup>
